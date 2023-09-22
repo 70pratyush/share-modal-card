@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="overflow-y-hidden">
+    <div class="wrapper w-full flex flex-col p-32 pb-64 items-center justify-center relative bg-[#010000]">
+        <!-- circle 1 -->
+        <div class="circle1 w-[140px] h-[140px] rounded-full bg-[#f7ad19] absolute top-[20px] left-[500px]"></div>
+
+
+
+        <!-- card -->
+        <div class="card border-2 bg-[#1C1A1C] border-[#3e393e]  rounded-xl flex flex-col items-center w-[320px] h-[370px]">
+
+            <!-- image -->
+            <div class="w-[120px] h-[120px] mb-7 mt-10 rounded-full overflow-hidden relative">
+                <img class="rounded-full w-full scale-150 object-cover absolute top-9"
+                 src="picture/pfp.jpg" alt="">
+            </div>
+            <h1 class="font-extrabold text-3xl mb-5 text-white">
+                Pratyush</h1>
+            <h2 class="text-slate-400 font-bold">Front-end Devloper</h2>
+
+            <div class="flex justify-center gap-3 w-[85%] text-xs pt-4">
+                <button class="btn border-2 border-[#9f929f] text-[#ddd4dd] font-bold py-2 px-1 rounded"
+                onclick="openModal()">
+                    <i class="fa-solid fa-share"></i> Share my profile
+                </button>
+                <a href="https://www.linkedin.com/in/70pratyush/" target="_blank"
+                class="btn border-2 border-[#9f929f] text-[#ddd4dd] font-bold py-2 px-8 rounded">
+                    follow me
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- circle 2 -->
+        <div class="circle2 w-[200px] h-[200px] rounded-full bg-[#62516d] absolute bottom-16 right-[470px]"></div>
+
+
+        <!-- modal -->
+        <div class="modal text-white w-[350px]  absolute z-20 border bg-[#00000096] border-slate-400 p-4 px-5 rounded-3xl backdrop-blur-lg">
+            <div class="modalHead flex justify-between pb-2">
+                <h1 class="font-bold text-lg">Share my profile</h1>
+                <div>
+                    <i onclick="closeModal()" class="fa-solid fa-xmark close p-2 cursor-pointer"></i>
+                    
+                </div>
+            </div>
+
+            <hr class="border-slate-400">
+            <div class="py-3 pb-3 flex flex-col gap-6">
+                <h3 class="font-medium text-sm">share this via</h3>
+                <div class="iconContainer flex justify-between">
+                    <a href="" class="text-blue-600 border-blue-600 icon border w-10 h-10 flex justify-center items-center rounded-full" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="" class="text-blue-400 border-blue-400 icon border w-10 h-10 flex justify-center items-center rounded-full" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    
+                    <a href="" class="text-pink-500 border-pink-500 icon border w-10 h-10 flex justify-center items-center rounded-full" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                    <a href="" class="text-green-500 border-green-500 icon border w-10 h-10 flex justify-center items-center rounded-full" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    
+                    <a href="" class="text-[#229ED9] border-[#229ED9] icon border w-10 h-10 flex justify-center items-center rounded-full" id="telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- overlay -->
+    <div class="overlay" onclick="closeModal()"></div>
+    <script src="script.js"></script>
+</body>
+</html>
